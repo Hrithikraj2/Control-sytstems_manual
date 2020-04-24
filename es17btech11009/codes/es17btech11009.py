@@ -1,4 +1,3 @@
-
 import control
 import matplotlib.pyplot as plt
 
@@ -9,10 +8,9 @@ den = [1,-3,0,0]
 G = control.tf(num,den) 
 control.nyquist(G)
 plt.grid(True)
+plt.scatter(-1,0,s=40)
+plt.annotate("-1+0j",(-1,0))
 plt.title('Nyquist Diagram of G(s)H(s)')
 plt.xlabel('Re(s)')
 plt.ylabel('Im(s)')
 plt.show()
-
-
-
